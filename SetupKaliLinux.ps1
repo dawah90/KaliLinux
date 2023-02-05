@@ -4,7 +4,7 @@ wsl --install -d kali-linux
 <#
 Steps in Kali Linux terminal to enable GUI: 
 
-#1: Install GUI for Kali-linux. Win-Kex
+#1: Install GUI for Kali-linux (Win-Kex).
 Source: https://www.kali.org/docs/wsl/win-kex/#run-win-kex
 
 sudo apt update
@@ -14,22 +14,22 @@ sudo apt install -y kali-win-kex
 Source: https://github.com/microsoft/WSL/discussions/6675
 
 sudo su
-umount /tmp/.X11-unix
-rm -rf /tmp/.X11-unix
-vncserver
-kex 
+sudo umount /tmp/.X11-unix
+sudo rm -rf /tmp/.X11-unix
+sudo vncserver
+sudo kex 
 
 # Win-Kex Cheat Sheet:
 
 #Start service
-kex start
+sudo kex start
+
+#Reset Kex after use
+sudo kex kill
 
 #To start Win-KeX in Window mode with sound support, run
-kex --win -s
-
-#To start Win-KeX in Enhanced Session Mode with sound support and arm workaround, run
-kex --esm --ip -s
+sudo kex --win -s
 
 #To start Win-KeX in Seamless mode with sound support, run
-kex --sl -s
+sudo kex --sl -s
 #>
